@@ -33,6 +33,17 @@ dependencies {
 
 	// Swagger
 	implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0'
+
+	// pdf
+	implementation 'com.microsoft.playwright:playwright:1.51.0'
+}
+
+// Playwright 설치 task 추가
+tasks.register('installPlaywright', JavaExec) {
+	description = 'Install Playwright browsers'
+	mainClass = 'com.microsoft.playwright.CLI'
+	args = ['install-deps']
+	classpath = configurations.runtimeClasspath
 }
 
 tasks.named('test') {

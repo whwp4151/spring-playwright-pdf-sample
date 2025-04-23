@@ -13,7 +13,7 @@ spring:
       enabled: true
 
   datasource:
-    url: jdbc:postgresql://localhost:32367/project?serverTimezone=UTC&characterEncoding=UTF-8&tinyInt1isBit=false
+    url: jdbc:postgresql://db:5432/project?serverTimezone=UTC&characterEncoding=UTF-8&tinyInt1isBit=false
     username: dev
     password: password
 
