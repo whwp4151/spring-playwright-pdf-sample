@@ -42,7 +42,6 @@ public class PdfGenerationService implements PdfGenerationUseCase {
             long pdfGenStart = System.nanoTime();
             byte[] pdfBytes = page.pdf(new Page.PdfOptions()
                     .setPrintBackground(true)
-                    .setScale(1.0)
                     .setWidth(command.getWidth() + "px")
                     .setHeight(command.getHeight() + "px"));
             log.info("[PDF] PDF 생성 완료. ({} ms)", elapsed(pdfGenStart));
